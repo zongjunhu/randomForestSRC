@@ -23,18 +23,19 @@ Compiling spark package is successfuly following the procedures below,
     ```
     git clone https://github.com/zongjunhu/randomForestSRC.git
     ```
-6. Update `maven` pom.xml to the following,
+6. Update `maven` configuration file `src/main/resources/spark/pom.xml` to the following.
     
     ```xml
-                <compilerExecutable>gcc</compilerExecutable>
+            <compilerExecutable>gcc</compilerExecutable>
             <linkerExecutable>gcc</linkerExecutable>
 
-                      <compilerStartOptions>
-              <compilerStartOption>-std=gnu99</compilerStartOption>
-                        <compilerStartOption>-I${env.JAVA_HOME}/include</compilerStartOption>
-              <compilerStartOption>-I${env.JAVA_HOME}/include/darwin</compilerStartOption>
-              <compilerStartOption>-I${env.JAVA_HOME}/include/linux</compilerStartOption>
+            ...
+            <compilerStartOption>-std=gnu99</compilerStartOption>
+            <compilerStartOption>-I${env.JAVA_HOME}/include</compilerStartOption>
+            <compilerStartOption>-I${env.JAVA_HOME}/include/darwin</compilerStartOption>
+            <compilerStartOption>-I${env.JAVA_HOME}/include/linux</compilerStartOption>
     ``` 
+    The updated version use older `gcc` compiler and include java Linux specific header files.
 7. compile and build spark package
 
     ```
