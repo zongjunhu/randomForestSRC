@@ -47,8 +47,8 @@ Stay in top directory in source code clone. Run the followings.
 
 1. upload input data to `hdfs`. This location is hard coded in java source code
     ```
-    hadoop mkdir test-classes
-    hadoop mkdir test-classes/data
+    hadoop fs -mkdir test-classes
+    hadoop fs -mkdir test-classes/data
     hadoop fs -put target/spark/src/test/resources/data/mtcars.csv test-classes/data/
     ```
 2. submit job to spark custom installation under `/opt/`
