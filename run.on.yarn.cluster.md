@@ -1,10 +1,11 @@
 # Bigfoot overview
 
-CCS `hadoop` cluster - `bigfoot` runs `Cloudera 5.7.1` on `CentOS-7.2`. It has the following built-in utils.
+In order to run sample case in a distributed cluster, instead of local machine, a `Spark` cluster is required. Here is an example to run sample job on `Cloudera` hadoop cluster with `yarn` resource manager. This instruction is tested in a system with following resources.
 
-1. Spark: spark-1.6.0 (standard default) and 2.2.0 (custom installation. downloaded binary from Apache Spark site)
-2. Gcc: 4.8.5
-3. Java: Sun Java 1.8.0_60
+1. `Cloudera` distribution `5.7.1` on `CentOS-7.2`.
+2. `Spark 2.2.0` custom installation. downloaded binary from Apache Spark site.
+3. Gcc: `4.8.5`
+4. Java: `Sun Java 1.8.0_60`
 
 # Compile and build Spark packages
 
